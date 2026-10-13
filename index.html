@@ -4297,6 +4297,41 @@ button,a,input,select{touch-action:manipulation}button:focus-visible,a:focus-vis
  #page-home .peopleHeroArt{inset:0!important;opacity:.28!important}
 }
 </style>
+
+<style id="adtriomphe-hero-final-visibility-and-spacing">
+/* Desktop: readable People Development text without hiding the left-side team photo */
+@media (min-width:901px){
+ #page-home .peopleHeroSection .peopleHeroArt{
+   background-image:linear-gradient(90deg,transparent 0%,rgba(248,247,244,.10) 31%,rgba(248,247,244,.83) 48%,rgba(248,247,244,.97) 67%,#f8f7f4 100%),url('assets/second-banner.png')!important;
+   background-position:center,right center!important;
+   background-size:cover,cover!important;
+ }
+ #page-home .peopleHeroSection .peopleHeroCopy{transform:translateX(38px)!important}
+ #page-home .peopleHeroSection .peopleHeroCopy p{color:#182630!important;font-weight:500!important}
+}
+@media (max-width:600px){
+ /* Remove leftover minimum heights and inherited top/bottom hero padding */
+ #page-home>.pageHero{min-height:0!important;height:auto!important;padding:0!important;margin:0!important;display:block!important}
+ #page-home>.pageHero>.wrap.heroGrid{min-height:0!important;height:auto!important;padding:8px 0 10px!important;margin-top:0!important;margin-bottom:0!important;display:block!important}
+ #page-home>.pageHero .heroGrid>.reveal:first-child{padding:0!important;margin:0!important;min-height:0!important;width:100%!important}
+ #page-home>.pageHero .heroGrid .heroCopy{padding-top:0!important;padding-bottom:0!important;margin-top:0!important;margin-bottom:0!important}
+ #page-home>.pageHero .heroGrid .heroCopy .eyebrow{margin-top:0!important}
+ #page-home>.pageHero .heroImg{inset:0 -24px!important;height:100%!important;min-height:0!important}
+ #page-home>.pageHero .heroActions{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:8px!important;margin:14px 0 0!important}
+ #page-home>.pageHero .heroActions .btn{min-width:0!important;width:100%!important;padding:10px 5px!important;font-size:clamp(9px,2.8vw,12px)!important;line-height:1.2!important;min-height:46px!important;white-space:nowrap!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;gap:4px!important;letter-spacing:-.025em!important}
+ #page-home>.pageHero .heroActions .btn.primary{font-size:clamp(9px,2.65vw,11.5px)!important}
+ #page-home>.pageHero .heroActions .btn .uiArrow{display:inline!important}
+ /* White gradient over the image, not a separate card behind text */
+ #page-home .peopleHeroSection .peopleHeroArt{opacity:1!important;background-image:linear-gradient(180deg,rgba(248,247,244,.94) 0%,rgba(248,247,244,.83) 42%,rgba(248,247,244,.76) 75%,rgba(248,247,244,.81) 100%),url('assets/second-banner.png')!important;background-position:center,center center!important;background-size:cover,cover!important}
+ #page-home .peopleHeroSection .peopleHeroInner{padding-top:32px!important;padding-bottom:32px!important;min-height:0!important}
+ #page-home .peopleHeroSection .peopleHeroCopy{background:transparent!important;padding:0!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important}
+ #page-home .peopleHeroSection .peopleHeroCopy p{color:#172631!important;font-weight:500!important}
+ #page-home .peopleHeroSection .peopleHeroCopy .btn{background:#15222d!important;color:#fff!important;border-color:#15222d!important}
+}
+@media (max-width:380px){
+ #page-home>.pageHero .heroActions .btn{font-size:9px!important;padding-left:3px!important;padding-right:3px!important}
+}
+</style>
 </head>
 <body>
 <div class="preloader" id="preloader" aria-hidden="true"><div class="preInner"><div class="preRing"></div><img class="preLogo" id="preLogo" alt=""><div class="preLine"></div></div></div>
@@ -4338,7 +4373,7 @@ button,a,input,select{touch-action:manipulation}button:focus-visible,a:focus-vis
         <div class="eyebrow">HR Consulting · Training · Malaysia</div>
         <h1>People-first training.<br><span class="heroAccent">Practical HR solutions.</span></h1>
         <p class="homeHeroLead">Develop confident teams and build stronger workplaces with professional training, HR Consulting, payroll management, Talent Solutions and IR / ER support.</p>
-        <div class="heroActions"><button class="btn primary" data-page="consulting">Explore Our Solutions →</button><button class="btn" data-page="training">View Programmes</button></div>
+        <div class="heroActions"><button class="btn primary" data-page="consulting">Explore Our Solutions <span class="uiArrow" aria-hidden="true">→</span></button><button class="btn" data-page="training">View Programmes</button></div>
         
       </div>
       <div class="heroImg reveal"><img src="assets/hero-banner.png" alt="Corporate training and teamwork"></div>
