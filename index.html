@@ -4139,6 +4139,55 @@ button,a,input,select{touch-action:manipulation}button:focus-visible,a:focus-vis
  }
 }
 </style>
+<style id="layout-repair-20261013">
+/* Desktop hero copy and art are separate halves, but on a single seamless surface. */
+@media(min-width:901px){
+#page-home>.pageHero{min-height:560px!important;padding:40px 0!important}
+#page-home>.pageHero .heroGrid>.reveal:first-child{margin-left:clamp(50px,8vw,155px)!important;width:min(43vw,650px)!important}
+#page-home .peopleHeroSection{min-height:520px!important}
+#page-home .peopleHeroSection .peopleHeroInner{min-height:520px!important;padding:40px clamp(55px,8vw,155px) 40px 0!important;justify-content:flex-end!important}
+#page-home .peopleHeroSection .peopleHeroCopy{width:min(37vw,570px)!important;margin:0!important}
+#page-home .peopleHeroArt{inset:0 39% 0 0!important;background:linear-gradient(90deg,transparent 65%,#f8f7f4 100%),url('assets/second-banner.png') left center/cover no-repeat!important}
+}
+@media(max-width:600px){
+#page-home>.pageHero{padding:0!important;min-height:0!important}
+#page-home>.pageHero .heroGrid{min-height:0!important;padding:42px 0!important}
+#page-home>.pageHero .heroGrid>.reveal:first-child{background:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-radius:0!important;box-shadow:none!important;padding:14px 8px!important}
+#page-home>.pageHero .heroImg{opacity:.25!important}
+#page-home>.pageHero .heroImg:before{background:rgba(248,247,244,.52)!important}
+#page-home .peopleHeroSection{min-height:0!important;padding:0!important}
+#page-home .peopleHeroSection .peopleHeroInner{min-height:0!important;padding:50px 0!important}
+#page-home .peopleHeroArt{opacity:.26!important;background:url('assets/second-banner.png') center/cover no-repeat!important}
+#page-home .peopleHeroCopy{background:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;box-shadow:none!important;border-radius:0!important;padding:12px 8px!important}
+#page-home .peopleHeroCopy p{color:#52606c!important}
+}
+/* Restore the original signature programme banners and carousel. */
+#signatureProgrammes .signatureCard{padding:0!important;overflow:hidden!important;min-height:0!important;display:flex!important;flex-direction:column!important}
+#signatureProgrammes .sigVisual{display:block!important;width:100%!important;aspect-ratio:16/9!important;height:auto!important;position:relative!important;margin:0!important;overflow:hidden!important;background:#f4f1eb!important}
+#signatureProgrammes .sigVisual img{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important;display:block!important;transition:transform .45s ease}
+#signatureProgrammes .signatureCard:hover .sigVisual img{transform:scale(1.045)}
+#signatureProgrammes .signatureTop,#signatureProgrammes .signatureCard h3,#signatureProgrammes .signatureCard p,#signatureProgrammes .signatureAction{margin-left:23px!important;margin-right:23px!important}
+#signatureProgrammes .signatureTop{margin-top:20px!important}
+#signatureProgrammes .signatureAction{margin-bottom:20px!important}
+#signatureProgrammes .signatureGrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media(max-width:720px){#signatureProgrammes .signatureGrid{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:10px}#signatureProgrammes .signatureCard{flex:0 0 85%!important;scroll-snap-align:start}#signatureProgrammes .signatureTop,#signatureProgrammes .signatureCard h3,#signatureProgrammes .signatureCard p,#signatureProgrammes .signatureAction{margin-left:17px!important;margin-right:17px!important}}
+#signatureProgrammes .sigDots{display:flex;justify-content:center;gap:8px;margin-top:16px}
+#signatureProgrammes .sigDots button{width:8px;height:8px;border:0;border-radius:50%;background:#cbd1d5;padding:0;cursor:pointer}
+#signatureProgrammes .sigDots button.active{width:23px;border-radius:5px;background:#ef5b2a}
+</style>
+<style id="hero-copy-not-at-edge-final">
+/* Desktop: center the wording within the left half instead of at the screen edge. */
+@media (min-width: 901px) {
+ #page-home > .pageHero .heroGrid {width:100%!important;max-width:none!important;display:block!important;position:relative!important;min-height:570px!important;padding:65px 0!important;box-sizing:border-box!important}
+ #page-home > .pageHero .heroGrid > .reveal:first-child {position:relative!important;z-index:3!important;width:min(39vw,650px)!important;max-width:650px!important;margin-left:clamp(150px,19vw,380px)!important;margin-right:0!important;padding:0!important}
+ #page-home > .pageHero .heroGrid > .heroImg {position:absolute!important;right:0!important;top:0!important;bottom:0!important;width:57%!important;height:100%!important;opacity:1!important;z-index:1!important;border-radius:0!important}
+ #page-home > .pageHero .heroGrid > .heroImg:before {content:""!important;position:absolute!important;inset:0!important;z-index:2!important;background:linear-gradient(90deg,#f8f7f4 0%,rgba(248,247,244,.5) 17%,transparent 47%)!important}
+ #page-home > .pageHero .heroGrid > .heroImg:after {display:none!important}
+}
+@media (min-width:901px) and (max-width:1200px) {
+ #page-home > .pageHero .heroGrid > .reveal:first-child {margin-left:clamp(90px,12vw,160px)!important;width:46vw!important}
+}
+</style>
 </head>
 <body>
 <div class="preloader" id="preloader" aria-hidden="true"><div class="preInner"><div class="preRing"></div><img class="preLogo" id="preLogo" alt=""><div class="preLine"></div></div></div>
@@ -4271,7 +4320,7 @@ button,a,input,select{touch-action:manipulation}button:focus-visible,a:focus-vis
     </div>
   </section>
 
-<section class="section clientFeatureSection" id="signatureProgrammes"><div class="wrap"><div class="eyebrow">Signature In-House Programmes</div><h2>Signature learning experiences.</h2><p class="clientSectionLead">Explore five signature learning experiences, each designed around a different people-development focus.</p><div class="signatureGrid"><article class="signatureCard"><div class="signatureTop"><span class="signaturePill">Communication & collaboration</span></div><h3>CONNECT 360</h3><p>Strengthen connections across teams through practical communication and shared understanding.</p><button type="button" class="signatureAction" data-programme="CONNECT 360">Explore &amp; Enquire <span aria-hidden="true">↗</span></button></article><article class="signatureCard"><div class="signatureTop"><span class="signaturePill">Emotional intelligence</span></div><h3>EQ EDGE</h3><p>Build awareness, empathy and confidence in workplace interactions.</p><button type="button" class="signatureAction" data-programme="EQ EDGE">Explore &amp; Enquire <span aria-hidden="true">↗</span></button></article><article class="signatureCard"><div class="signatureTop"><span class="signaturePill">People & team development</span></div><h3>PEOPLE POWER</h3><p>Develop stronger people practices, team trust and everyday leadership habits.</p><button type="button" class="signatureAction" data-programme="PEOPLE POWER">Explore &amp; Enquire <span aria-hidden="true">↗</span></button></article><article class="signatureCard"><div class="signatureTop"><span class="signaturePill">Coaching capability</span></div><h3>CERTIFIED COACHING</h3><p>Explore a structured coaching approach to support meaningful professional growth.</p><button type="button" class="signatureAction" data-programme="CERTIFIED COACHING">Explore &amp; Enquire <span aria-hidden="true">↗</span></button></article><article class="signatureCard"><div class="signatureTop"><span class="signaturePill">Mindset & communication</span></div><h3>NLP MIND SHIFT</h3><p>Explore new perspectives, communication patterns and personal effectiveness.</p><button type="button" class="signatureAction" data-programme="NLP MIND SHIFT">Explore &amp; Enquire <span aria-hidden="true">↗</span></button></article></div></div></section>
+<section class="section clientFeatureSection" id="signatureProgrammes"><div class="wrap"><div class="eyebrow">Signature In-House Programmes</div><h2>Signature learning experiences.</h2><p class="clientSectionLead">Explore five signature learning experiences, each designed around a different people-development focus.</p><div class="signatureGrid" id="signatureCarousel"><article class="signatureCard sig-communication"><div class="sigVisual"><img src="assets/signature/connect-360.png" alt="Signature in-house programme banner" loading="lazy" onerror="this.parentElement.classList.add('imageMissing')"></div><div class="signatureTop"><span class="signaturePill">Communication & collaboration</span></div><h3>CONNECT 360</h3><p>Strengthen connections across teams through practical communication and shared understanding.</p><button type="button" class="signatureAction" data-programme="CONNECT 360">Explore Programme <span aria-hidden="true">↗</span></button></article><article class="signatureCard sig-empathy"><div class="sigVisual"><img src="assets/signature/eq-edge.png" alt="Signature in-house programme banner" loading="lazy" onerror="this.parentElement.classList.add('imageMissing')"></div><div class="signatureTop"><span class="signaturePill">Emotional intelligence</span></div><h3>EQ EDGE</h3><p>Build awareness, empathy and confidence in workplace interactions.</p><button type="button" class="signatureAction" data-programme="EQ EDGE">Explore Programme <span aria-hidden="true">↗</span></button></article><article class="signatureCard sig-team"><div class="sigVisual"><img src="assets/signature/people-power.png" alt="Signature in-house programme banner" loading="lazy" onerror="this.parentElement.classList.add('imageMissing')"></div><div class="signatureTop"><span class="signaturePill">People & team development</span></div><h3>PEOPLE POWER</h3><p>Develop stronger people practices, team trust and everyday leadership habits.</p><button type="button" class="signatureAction" data-programme="PEOPLE POWER">Explore Programme <span aria-hidden="true">↗</span></button></article><article class="signatureCard sig-coaching"><div class="sigVisual"><img src="assets/signature/certified-coaching.png" alt="Signature in-house programme banner" loading="lazy" onerror="this.parentElement.classList.add('imageMissing')"></div><div class="signatureTop"><span class="signaturePill">Coaching capability</span></div><h3>CERTIFIED COACHING</h3><p>Explore a structured coaching approach to support meaningful professional growth.</p><button type="button" class="signatureAction" data-programme="CERTIFIED COACHING">Explore Programme <span aria-hidden="true">↗</span></button></article><article class="signatureCard sig-mindset"><div class="sigVisual"><img src="assets/signature/nlp-mind-shift.png" alt="Signature in-house programme banner" loading="lazy" onerror="this.parentElement.classList.add('imageMissing')"></div><div class="signatureTop"><span class="signaturePill">Mindset & communication</span></div><h3>NLP MIND SHIFT</h3><p>Explore new perspectives, communication patterns and personal effectiveness.</p><button type="button" class="signatureAction" data-programme="NLP MIND SHIFT">Explore Programme <span aria-hidden="true">↗</span></button></article></div><div class="sigDots" id="signatureDots" aria-label="Signature programme slides"></div></div></section>
   <section class="section soft" id="inHouseCategories">
     <div class="wrap">
       <div class="sectionLeadRow">
@@ -5149,5 +5198,6 @@ let io;function initReveal(){if(io)io.disconnect();io=new IntersectionObserver(e
  document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
  window.addEventListener('resize',()=>{if(!desktop())close();});
 })();
-</script></body>
+</script><script id="signature-dots-repair">(function(){const rail=document.getElementById('signatureCarousel'),dots=document.getElementById('signatureDots');if(!rail||!dots)return;const cards=[...rail.querySelectorAll('.signatureCard')];cards.forEach((card,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show '+card.querySelector('h3').textContent);b.addEventListener('click',()=>card.scrollIntoView({behavior:'smooth',block:'nearest',inline:'start'}));dots.appendChild(b)});function update(){let nearest=0,dist=Infinity;cards.forEach((card,i)=>{const d=Math.abs(card.offsetLeft-cards[0].offsetLeft-rail.scrollLeft);if(d<dist){dist=d;nearest=i}});[...dots.children].forEach((b,i)=>b.classList.toggle('active',i===nearest))}rail.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update);update()})();</script>
+</body>
 </html>
