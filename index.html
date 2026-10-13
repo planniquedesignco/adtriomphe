@@ -4219,6 +4219,40 @@ button,a,input,select{touch-action:manipulation}button:focus-visible,a:focus-vis
  .page:not(#page-home)>.pageHero{padding:30px 0 34px!important}
 }
 </style>
+
+<style id="adtriomphe-hero-final-visual-correction">
+/* Desktop: a single continuous hero composition, not a top-aligned image panel. */
+@media (min-width:901px){
+ #page-home > .pageHero {background:#f8f7f4!important;min-height:560px!important;padding:0!important;overflow:hidden!important;display:flex!important;align-items:center!important}
+ #page-home > .pageHero > .heroGrid {display:grid!important;grid-template-columns:1fr 1fr!important;max-width:1440px!important;width:100%!important;min-height:560px!important;margin:0 auto!important;padding:0 38px!important;gap:0!important;align-items:center!important;position:relative!important;box-sizing:border-box!important}
+ #page-home > .pageHero .heroGrid > .reveal:first-child {grid-column:1!important;position:relative!important;z-index:4!important;width:100%!important;max-width:650px!important;margin:0!important;padding:42px 0 42px 20px!important;box-sizing:border-box!important}
+ #page-home > .pageHero .heroGrid > .heroImg {grid-column:auto!important;position:absolute!important;top:0!important;right:0!important;bottom:0!important;left:auto!important;transform:none!important;width:58%!important;height:100%!important;min-height:560px!important;max-height:none!important;overflow:hidden!important;border:0!important;border-radius:0!important;box-shadow:none!important;opacity:1!important;z-index:1!important;pointer-events:none!important;-webkit-mask-image:none!important;mask-image:none!important;background:transparent!important}
+ #page-home > .pageHero .heroGrid > .heroImg img {position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;object-fit:cover!important;object-position:50% 50%!important;transform:none!important;display:block!important}
+ #page-home > .pageHero .heroGrid > .heroImg:before {content:''!important;display:block!important;position:absolute!important;inset:0!important;z-index:2!important;background:linear-gradient(90deg,#f8f7f4 0%,rgba(248,247,244,.94) 11%,rgba(248,247,244,.56) 30%,rgba(248,247,244,0) 55%),linear-gradient(0deg,#f8f7f4 0%,transparent 17%)!important;pointer-events:none!important}
+ #page-home > .pageHero .heroGrid > .heroImg:after {display:none!important}
+ #page-home .peopleHeroSection{min-height:510px!important;padding:0!important}
+ #page-home .peopleHeroSection .peopleHeroInner{min-height:510px!important;padding-top:42px!important;padding-bottom:42px!important}
+ #page-home .peopleHeroCopy{margin-left:auto!important;margin-right:4%!important;width:46%!important;max-width:560px!important}
+ #page-home .peopleHeroArt{inset:0 37% 0 0!important;background:linear-gradient(270deg,#f8f7f4 0%,rgba(248,247,244,.4) 20%,transparent 50%),url('assets/second-banner.png') center center/cover no-repeat!important}
+}
+@media (min-width:901px) and (max-width:1150px){
+ #page-home > .pageHero > .heroGrid{padding:0 24px!important}
+ #page-home > .pageHero .heroGrid > .reveal:first-child{padding-left:0!important;max-width:520px!important}
+ #page-home > .pageHero .heroGrid > .heroImg{width:58%!important}
+}
+/* Mobile: image behind the words, with no separate frosted card or giant blank strips. */
+@media (max-width:900px){
+ #page-home > .pageHero{min-height:0!important;padding:28px 0!important}
+ #page-home > .pageHero .heroGrid{min-height:0!important;padding:30px 0!important}
+ #page-home > .pageHero .heroGrid > .reveal:first-child{background:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-radius:0!important;padding:26px 12px!important}
+ #page-home > .pageHero .heroGrid > .heroImg{opacity:.26!important;inset:0!important;height:100%!important;overflow:hidden!important;-webkit-mask-image:none!important;mask-image:none!important}
+ #page-home > .pageHero .heroGrid > .heroImg img{object-fit:cover!important;object-position:center center!important}
+ #page-home .peopleHeroSection{min-height:0!important;padding:40px 0!important}
+ #page-home .peopleHeroSection .peopleHeroInner{min-height:0!important;padding:22px 0!important}
+ #page-home .peopleHeroCopy{width:100%!important;margin:0!important;background:transparent!important;backdrop-filter:none!important;-webkit-backdrop-filter:none!important;border-radius:0!important}
+ #page-home .peopleHeroArt{inset:0!important;opacity:.28!important}
+}
+</style>
 </head>
 <body>
 <div class="preloader" id="preloader" aria-hidden="true"><div class="preInner"><div class="preRing"></div><img class="preLogo" id="preLogo" alt=""><div class="preLine"></div></div></div>
