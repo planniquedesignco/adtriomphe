@@ -2912,6 +2912,12 @@ header.scrolled{
     display:none !important;
   }
 
+  .desktopInhousePanel[hidden]{display:none !important}
+  .desktopInhousePanel{padding-top:10px;animation:desktopInhouseReveal .2s ease both}
+  @keyframes desktopInhouseReveal{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
+  .desktopViewAllInhouse,.desktopSignatureInhouse{display:flex;width:100%;justify-content:space-between;align-items:center;text-align:left;border:0;border-radius:9px;padding:12px 13px;background:#faf7f4;color:var(--ink);font-size:11px;font-weight:600;margin:3px 0 6px;cursor:pointer}
+  .desktopSignatureInhouse{background:#fff5ef;color:#e9512d}
+  .desktopViewAllInhouse:hover,.desktopSignatureInhouse:hover{background:#f8ebe2}
   .desktopPreviousTraining{
     display:block;
     padding:16px 18px 18px;
@@ -3806,6 +3812,34 @@ header.scrolled{
 .siteContactButton:hover{background:#ff7147!important;border-color:#ff7147!important;box-shadow:0 14px 30px rgba(0,0,0,.18)}
 @media(max-width:700px){.siteContactCTA{padding:43px 0!important}.siteContactCTA::before{width:270px;height:270px;top:-160px;right:-140px}.siteContactCTA::after{display:none}.siteContactCTAInner{gap:20px!important}}
 
+
+/* Desktop training accordion: one arrow per link and clear reading order */
+@media (min-width: 901px){
+  #trainingDropdown .desktopInhousePanel .desktopSignatureInhouse,
+  #trainingDropdown .desktopInhousePanel .desktopViewAllInhouse{
+    position:relative;display:flex;align-items:center;justify-content:space-between;
+    width:100%;min-height:58px;padding:12px 14px !important;margin:0 0 7px;
+    border:1px solid #e9e9e7 !important;border-radius:11px !important;
+    background:#fff !important;color:var(--ink) !important;
+    text-align:left;transition:background .2s ease,border-color .2s ease,transform .2s ease;
+  }
+  #trainingDropdown .desktopInhousePanel .desktopSignatureInhouse{background:#fff8f3 !important;border-color:#f7ded1 !important}
+  #trainingDropdown .desktopInhousePanel .desktopSignatureInhouse:after,
+  #trainingDropdown .desktopInhousePanel .desktopViewAllInhouse:after{content:none !important;display:none !important}
+  #trainingDropdown .desktopInhousePanel .desktopSignatureInhouse span,
+  #trainingDropdown .desktopInhousePanel .desktopViewAllInhouse span{display:block;font-size:11px;font-weight:700;line-height:1.45}
+  #trainingDropdown .desktopInhousePanel .desktopSignatureInhouse small,
+  #trainingDropdown .desktopInhousePanel .desktopViewAllInhouse small{display:block;margin-top:3px;font-size:9.5px;font-weight:400;color:#7b858d}
+  #trainingDropdown .desktopInhousePanel .desktopSignatureInhouse i,
+  #trainingDropdown .desktopInhousePanel .desktopViewAllInhouse i{display:inline-flex;align-items:center;justify-content:center;font-size:15px;font-weight:400;font-style:normal;color:#ed582f;transition:transform .2s ease}
+  #trainingDropdown .desktopInhousePanel .desktopSignatureInhouse:hover,
+  #trainingDropdown .desktopInhousePanel .desktopViewAllInhouse:hover{background:#fff2e9 !important;border-color:#f6cdbb !important;transform:translateY(-1px)}
+  #trainingDropdown .desktopInhousePanel .desktopSignatureInhouse:hover i,
+  #trainingDropdown .desktopInhousePanel .desktopViewAllInhouse:hover i{transform:translateX(3px)}
+  #trainingDropdown .desktopPreviousAreasLabel{margin-top:9px;padding-top:15px;border-top:1px solid #eceeec}
+  #trainingDropdown .desktopPreviousInhouse i{font-weight:500;font-size:19px}
+  #trainingDropdown .desktopPreviousInhouse:hover i{transform:none}
+}
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
 body,button,input,select,textarea,h1,h2,h3,.stat b,.testimonialQuote,.courseDetailBlock h3{font-family:'Poppins',Arial,sans-serif!important}
@@ -4002,18 +4036,20 @@ button,a,input,select{touch-action:manipulation}button:focus-visible,a:focus-vis
 .siteContactButton:hover{background:#d94d20!important;border-color:#d94d20!important;box-shadow:0 12px 25px rgba(194,68,29,.18)!important}
 @media(max-width:700px){.siteContactCTA{padding:40px 0!important}.siteContactCopy h2{font-size:clamp(25px,7vw,32px)!important;line-height:1.22!important}.siteContactCopy p{font-size:14px!important;line-height:1.65!important}.siteContactButton{font-size:14px!important;min-height:52px!important}}
 </style>
-<style>
+<style id="desktop-training-click-fix">
 @media(min-width:981px){
+ .navItem:has(> #trainingDropdown){position:relative!important}
  .navItem:has(> #trainingDropdown):hover > #trainingDropdown,
- .navItem:has(> #trainingDropdown):focus-within > #trainingDropdown{
-   opacity:0!important;visibility:hidden!important;pointer-events:none!important;
- }
+ .navItem:has(> #trainingDropdown):focus-within > #trainingDropdown,
  .navItem.trainingClickOpen > #trainingDropdown,
- .navItem.trainingClickOpen:hover > #trainingDropdown,
- .navItem.trainingClickOpen:focus-within > #trainingDropdown{
-   opacity:1!important;visibility:visible!important;pointer-events:auto!important;
-   transform:translate(-45%,0)!important;
+ .navItem.suppressDropdown:hover > #trainingDropdown,
+ .navItem.suppressDropdown.trainingClickOpen > #trainingDropdown{
+  display:block!important;opacity:1!important;visibility:visible!important;
+  pointer-events:auto!important;transform:translate(-45%,0)!important;
+  z-index:9999!important;
  }
+ .navItem:has(> #trainingDropdown) > #trainingDropdown{top:calc(100% - 2px)!important}
+ .navItem:has(> #trainingDropdown):hover > button{color:var(--orange)!important}
 }
 </style></head>
 <body>
@@ -4337,18 +4373,21 @@ function renderMenus(){
     </div>
 
     <div class="desktopPreviousTraining">
-      <button class="desktopPreviousInhouse" data-page="inhouse">
+      <button class="desktopPreviousInhouse" type="button" aria-expanded="false" aria-controls="desktopInhousePanel">
         <span>
           <b>In-House Programmes</b>
           <small>Tailored training for organisations</small>
         </span>
-        <i>→</i>
+        <i>+</i>
       </button>
 
-      <div class="desktopPreviousAreasLabel">Programme Areas</div>
-
-      <div class="desktopPreviousAreas">
-        ${trainingKeys.map(k=>`<button data-training="${k}">${trainingData[k].label}</button>`).join('')}
+      <div id="desktopInhousePanel" class="desktopInhousePanel" hidden>
+        <button type="button" class="desktopSignatureInhouse" data-page="inhouse" data-anchor="signatureProgrammes"><span>Signature In-House Programmes<small>Explore five signature learning experiences</small></span><i aria-hidden="true">→</i></button>
+        <button type="button" class="desktopViewAllInhouse" data-page="inhouse"><span>View All In-House Programmes<small>Browse our complete training offering</small></span><i aria-hidden="true">→</i></button>
+        <div class="desktopPreviousAreasLabel">Programme Areas</div>
+        <div class="desktopPreviousAreas">
+          ${trainingKeys.map(k=>`<button data-training="${k}">${trainingData[k].label}</button>`).join('')}
+        </div>
       </div>
 
       <button class="desktopPreviousPublic" data-page="public-training">
@@ -4398,6 +4437,20 @@ function renderMenus(){
   mobileConsulting.innerHTML=Object.entries(consultingData)
     .map(([k,v])=>`<button data-consult="${k}">${v.title}</button>`)
     .join('');
+
+  /* Desktop: In-House is an accordion, not a navigation link. */
+  const desktopToggle=trainingDropdown.querySelector('.desktopPreviousInhouse');
+  const desktopPanel=trainingDropdown.querySelector('#desktopInhousePanel');
+  if(desktopToggle && desktopPanel){
+    desktopToggle.addEventListener('click',e=>{
+      e.preventDefault(); e.stopPropagation();
+      const open=desktopToggle.getAttribute('aria-expanded')!=='true';
+      desktopToggle.setAttribute('aria-expanded',String(open));
+      desktopPanel.hidden=!open;
+      const icon=desktopToggle.querySelector('i');
+      if(icon)icon.textContent=open?'−':'+';
+    });
+  }
 
   /* Mobile: tapping In-House itself expands the categories. */
   const mobileToggle=mobileTraining.querySelector('.mobileInhouseToggleOnly');
@@ -4981,27 +5034,31 @@ let io;function initReveal(){if(io)io.disconnect();io=new IntersectionObserver(e
  sync();
 })();
 </script><script>
-/* Desktop Training dropdown: click to toggle, not hover. Mobile untouched. */
+/* Desktop Training: hover AND click; intercept navigation on the capture phase. */
 (function(){
  const trigger=document.querySelector('.navItem > button[data-page="training"]');
  const menu=document.getElementById('trainingDropdown');
  if(!trigger||!menu)return;
- const item=trigger.parentElement;
+ const item=trigger.closest('.navItem');
  trigger.setAttribute('aria-haspopup','true');
+ trigger.setAttribute('aria-controls','trainingDropdown');
  trigger.setAttribute('aria-expanded','false');
- function close(){item.classList.remove('trainingClickOpen');trigger.setAttribute('aria-expanded','false');}
+ const desktop=()=>window.matchMedia('(min-width:981px)').matches;
+ const close=()=>{item.classList.remove('trainingClickOpen');trigger.setAttribute('aria-expanded','false');};
  trigger.addEventListener('click',function(e){
-   if(window.matchMedia('(min-width:981px)').matches){
-     e.preventDefault();e.stopImmediatePropagation();
-     const wasOpen=item.classList.contains('trainingClickOpen');
-     document.querySelectorAll('.navItem.trainingClickOpen').forEach(el=>el.classList.remove('trainingClickOpen'));
-     item.classList.toggle('trainingClickOpen',!wasOpen);
-     trigger.setAttribute('aria-expanded',String(!wasOpen));
-   }
+  if(!desktop())return;
+  e.preventDefault();e.stopPropagation();e.stopImmediatePropagation();
+  const next=!item.classList.contains('trainingClickOpen');
+  item.classList.remove('suppressDropdown');
+  item.classList.toggle('trainingClickOpen',next);
+  trigger.setAttribute('aria-expanded',String(next));
  },true);
- document.addEventListener('click',function(e){if(!item.contains(e.target))close();});
- menu.addEventListener('click',function(e){if(e.target.closest('button'))close();});
- document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
+ item.addEventListener('mouseenter',()=>{if(desktop()){item.classList.remove('suppressDropdown');trigger.setAttribute('aria-expanded','true');}});
+ item.addEventListener('mouseleave',()=>{if(desktop()&&!item.classList.contains('trainingClickOpen'))trigger.setAttribute('aria-expanded','false');});
+ document.addEventListener('click',e=>{if(!item.contains(e.target))close();});
+ menu.addEventListener('click',e=>{if(e.target.closest('.desktopPreviousInhouse'))return;if(e.target.closest('button'))close();});
+ document.addEventListener('keydown',e=>{if(e.key==='Escape')close();});
+ window.addEventListener('resize',()=>{if(!desktop())close();});
 })();
 </script></body>
 </html>
