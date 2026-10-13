@@ -3806,75 +3806,6 @@ header.scrolled{
 .siteContactButton:hover{background:#ff7147!important;border-color:#ff7147!important;box-shadow:0 14px 30px rgba(0,0,0,.18)}
 @media(max-width:700px){.siteContactCTA{padding:43px 0!important}.siteContactCTA::before{width:270px;height:270px;top:-160px;right:-140px}.siteContactCTA::after{display:none}.siteContactCTAInner{gap:20px!important}}
 
-
-/* Signature programmes — refined visual identity and interactive mobile carousel */
-#signatureProgrammes{scroll-margin-top:100px}
-#signatureProgrammes .signatureGrid{grid-template-columns:repeat(6,minmax(0,1fr))!important;gap:18px!important}
-#signatureProgrammes .signatureCard{grid-column:span 2;position:relative;overflow:hidden;padding:0 25px 23px!important;min-height:340px!important;isolation:isolate;transition:transform .32s ease,box-shadow .32s ease,border-color .32s ease!important}
-#signatureProgrammes .signatureCard:nth-child(4){grid-column:2/span 2}
-#signatureProgrammes .signatureCard:nth-child(5){grid-column:4/span 2}
-#signatureProgrammes .sigVisual{height:116px;margin:0 -25px 21px;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(115deg,#f2f6f9,#dce9f4);color:#315e84}
-#signatureProgrammes .sigVisual svg{width:72px;height:72px;z-index:1;transition:transform .45s ease}
-#signatureProgrammes .sigVisualOrb{position:absolute;width:180px;height:180px;border-radius:50%;right:-55px;top:-90px;background:rgba(255,255,255,.42);transition:transform .5s ease}
-#signatureProgrammes .sig-empathy .sigVisual{background:linear-gradient(115deg,#fff1ed,#ffded6);color:#cb6048}
-#signatureProgrammes .sig-team .sigVisual{background:linear-gradient(115deg,#e8f5f0,#cde8dd);color:#357d66}
-#signatureProgrammes .sig-coaching .sigVisual{background:linear-gradient(115deg,#f2eefb,#dfd7f1);color:#7763a6}
-#signatureProgrammes .sig-mindset .sigVisual{background:linear-gradient(115deg,#fff3df,#ffe1b3);color:#b5772e}
-#signatureProgrammes .signatureCard:hover .sigVisual svg{transform:translateY(-5px) scale(1.07)}
-#signatureProgrammes .signatureCard:hover .sigVisualOrb{transform:translate(-15px,20px)}
-#signatureProgrammes .signatureCard:focus-within{border-color:#ed673d;box-shadow:0 14px 32px rgba(7,24,39,.09)}
-#signatureProgrammes .signatureAction span{transition:transform .22s ease}
-#signatureProgrammes .signatureAction:hover span{transform:translate(3px,-3px)}
-#signatureProgrammes .sigDots{display:none}
-#trainingDropdown .sigMenuLink{display:flex!important;align-items:center;justify-content:space-between;width:100%;text-align:left;border:1px solid #f5d7c8;background:#fff7f2;border-radius:12px;padding:13px 15px!important;margin:8px 0;color:#17242f}
-#trainingDropdown .sigMenuLink b,.sigMobileLink b{display:block;font-size:13px}
-#trainingDropdown .sigMenuLink small,.sigMobileLink small{display:block;font-size:11px;color:#69747d;margin-top:4px}
-#trainingDropdown .sigMenuLink i,.sigMobileLink i{font-style:normal;color:#ed623d;font-size:18px}
-#trainingDropdown .sigMenuLink:hover{background:#ffede3}
-.mobileGroupedTraining .sigMobileLink{width:100%;display:flex;align-items:center;justify-content:space-between;padding:14px!important;border:1px solid #f5d7c8!important;border-radius:12px;background:#fff7f2;text-align:left;margin:8px 0}
-@media(max-width:900px){#signatureProgrammes .signatureGrid{grid-template-columns:repeat(2,minmax(0,1fr))!important}#signatureProgrammes .signatureCard,#signatureProgrammes .signatureCard:nth-child(4),#signatureProgrammes .signatureCard:nth-child(5){grid-column:auto}}
-@media(max-width:680px){
- #signatureProgrammes .signatureGrid{display:flex!important;overflow-x:auto;scroll-snap-type:x mandatory;overscroll-behavior-inline:contain;scrollbar-width:none;gap:13px!important;padding:5px 22px 18px 2px;margin-right:-18px}
- #signatureProgrammes .signatureGrid::-webkit-scrollbar{display:none}
- #signatureProgrammes .signatureCard,#signatureProgrammes .signatureCard:nth-child(4),#signatureProgrammes .signatureCard:nth-child(5){flex:0 0 84%;scroll-snap-align:start;min-height:330px!important;padding:0 20px 20px!important;border-radius:17px!important}
- #signatureProgrammes .sigVisual{margin:0 -20px 17px;height:112px}
- #signatureProgrammes .sigDots{display:flex;justify-content:center;gap:9px;padding-top:5px}
- #signatureProgrammes .sigDots button{width:8px;height:8px;padding:0;border-radius:50%;background:#cfd4d7;border:0;cursor:pointer;transition:width .2s,background .2s}
- #signatureProgrammes .sigDots button.active{width:24px;border-radius:10px;background:#ee5c34}
-}
-@media(prefers-reduced-motion:reduce){#signatureProgrammes .signatureCard,#signatureProgrammes .sigVisual svg,#signatureProgrammes .sigVisualOrb{transition:none!important}#signatureProgrammes .signatureGrid{scroll-behavior:auto!important}}
-
-/* People Development: full-bleed hero layout matching the homepage */
-#page-home .peopleHeroSection{position:relative;isolation:isolate;overflow:hidden;background:#f8f7f4;min-height:620px;padding:0;display:flex;align-items:center}
-#page-home .peopleHeroSection .peopleHeroInner{position:relative;z-index:2;min-height:620px;display:flex;align-items:center;padding-top:78px;padding-bottom:78px}
-#page-home .peopleHeroCopy{width:min(49%,550px);position:relative;z-index:2}
-#page-home .peopleHeroCopy h2{font-size:clamp(36px,3.1vw,53px);line-height:1.13;letter-spacing:-.045em;max-width:540px;margin-top:19px}
-#page-home .peopleHeroCopy p{font-size:16px;line-height:1.8;max-width:530px;margin:22px 0 26px;color:var(--muted)}
-#page-home .peopleHeroArt{position:absolute;z-index:0;inset:0 0 0 42%;background-image:linear-gradient(90deg,#f8f7f4 0%,rgba(248,247,244,.80) 9%,rgba(248,247,244,0) 33%),url('assets/second-banner.png');background-repeat:no-repeat;background-position:center,right center;background-size:100% 100%,cover;animation:peopleArtEnter 1.2s ease-out both}
-@keyframes peopleArtEnter{from{opacity:.3;transform:translateX(22px)}to{opacity:1;transform:translateX(0)}}
-@media(max-width:900px){
- #page-home .peopleHeroSection{min-height:0;display:block}
- #page-home .peopleHeroSection .peopleHeroInner{min-height:0;padding-top:70px;padding-bottom:390px;display:block}
- #page-home .peopleHeroCopy{width:100%;max-width:630px}
- #page-home .peopleHeroArt{inset:auto 0 0 0;height:410px;background-image:linear-gradient(180deg,#f8f7f4 0%,rgba(248,247,244,0) 25%),url('assets/second-banner.png');background-size:100% 100%,cover;background-position:center,center center}
-}
-@media(max-width:600px){
- #page-home .peopleHeroSection .peopleHeroInner{padding-top:55px;padding-bottom:295px}
- #page-home .peopleHeroCopy h2{font-size:clamp(32px,9vw,42px)}
- #page-home .peopleHeroCopy p{font-size:15px;line-height:1.7}
- #page-home .peopleHeroArt{height:305px;background-position:center,center center}
-}
-
-/* People Development: restore original image-left, text-right arrangement */
-@media(min-width:901px){
- #page-home .peopleHeroSection .peopleHeroInner{justify-content:flex-end}
- #page-home .peopleHeroCopy{width:min(46%,550px);margin-left:auto}
- #page-home .peopleHeroArt{inset:0 46% 0 0;background-image:linear-gradient(270deg,#f8f7f4 0%,rgba(248,247,244,.78) 10%,rgba(248,247,244,0) 34%),url('assets/second-banner.png');background-position:center,left center;background-size:100% 100%,cover;animation:peopleArtEnterLeft 1.2s ease-out both}
-}
-@keyframes peopleArtEnterLeft{from{opacity:.3;transform:translateX(-22px)}to{opacity:1;transform:translateX(0)}}
-@media(prefers-reduced-motion:reduce){#page-home .peopleHeroArt{animation:none}}
-
-
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
 body,button,input,select,textarea,h1,h2,h3,.stat b,.testimonialQuote,.courseDetailBlock h3{font-family:'Poppins',Arial,sans-serif!important}
@@ -4072,165 +4003,19 @@ button,a,input,select{touch-action:manipulation}button:focus-visible,a:focus-vis
 @media(max-width:700px){.siteContactCTA{padding:40px 0!important}.siteContactCopy h2{font-size:clamp(25px,7vw,32px)!important;line-height:1.22!important}.siteContactCopy p{font-size:14px!important;line-height:1.65!important}.siteContactButton{font-size:14px!important;min-height:52px!important}}
 </style>
 <style>
-
-/* ADtriomphe: keep the ORIGINAL text grid position, use banner only as background */
-#page-home > .pageHero{
-  position:relative!important;isolation:isolate;overflow:hidden!important;
-  background-color:#f7f6f2!important;
-  background-image:linear-gradient(90deg,#f7f6f2 0%,rgba(247,246,242,.96) 32%,rgba(247,246,242,.20) 60%,rgba(247,246,242,0) 100%),url("assets/hero-banner.png")!important;
-  background-repeat:no-repeat!important;
-  background-position:center,right center!important;
-  background-size:100% 100%,auto 100%!important;
-  padding:clamp(64px,7vw,108px) 0!important;
-  min-height:clamp(620px,52vw,780px)!important;
-  display:flex!important;align-items:center!important;
-}
-#page-home > .pageHero:after{display:none!important}
-#page-home > .pageHero .heroGrid{
-  display:grid!important;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)!important;
-  gap:clamp(32px,5vw,80px)!important;align-items:center!important;width:100%;
-}
-#page-home > .pageHero .heroGrid > .reveal:first-child{
-  position:relative!important;z-index:2!important;width:auto!important;max-width:none!important;
-  grid-column:1!important;
-}
-#page-home > .pageHero .heroImg{display:none!important}
-@media(max-width:900px){
- #page-home > .pageHero{
-   display:block!important;min-height:0!important;
-   padding:58px 0 0!important;
-   background-image:none!important;
+@media(min-width:981px){
+ .navItem:has(> #trainingDropdown):hover > #trainingDropdown,
+ .navItem:has(> #trainingDropdown):focus-within > #trainingDropdown{
+   opacity:0!important;visibility:hidden!important;pointer-events:none!important;
  }
- #page-home > .pageHero .heroGrid{display:block!important}
- #page-home > .pageHero .heroGrid > .reveal:first-child{width:100%!important;max-width:100%!important}
- #page-home > .pageHero .heroGrid:after{
-   content:"";display:block;height:clamp(280px,63vw,480px);
-   margin:14px calc((100vw - 100%)/-2) 0;
-   background-image:url("assets/hero-banner.png");background-repeat:no-repeat;
-   background-size:auto 100%;background-position:right bottom;
+ .navItem.trainingClickOpen > #trainingDropdown,
+ .navItem.trainingClickOpen:hover > #trainingDropdown,
+ .navItem.trainingClickOpen:focus-within > #trainingDropdown{
+   opacity:1!important;visibility:visible!important;pointer-events:auto!important;
+   transform:translate(-45%,0)!important;
  }
 }
-@media(max-width:540px){
- #page-home > .pageHero{padding:38px 0 0!important}
- #page-home > .pageHero .heroGrid:after{height:300px;margin-top:10px;background-size:auto 100%;background-position:right bottom}
-}
-</style>
-<style>
-/* Restore original centered 1180px hero content position. */
-#page-home > .pageHero > .wrap.heroGrid{
-  width:min(1180px,calc(100% - 44px))!important;
-  max-width:1180px!important;
-  margin-left:auto!important;
-  margin-right:auto!important;
-  box-sizing:border-box!important;
-}
-@media(max-width:700px){
-  #page-home > .pageHero > .wrap.heroGrid{
-    width:calc(100% - 28px)!important;
-    max-width:calc(100% - 28px)!important;
-  }
-}
-</style>
-<style>
-/* Signature programme photographic banners, no icon graphics */
-#signatureProgrammes .signatureCard{min-height:390px!important}
-#signatureProgrammes .sigVisual{height:170px!important;background:#f4f1eb!important;margin:0 -25px 20px!important;display:block!important;overflow:hidden}
-#signatureProgrammes .sigVisual img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;transition:transform .55s ease;}
-#signatureProgrammes .signatureCard:hover .sigVisual img{transform:scale(1.045)}
-#signatureProgrammes .sigVisual.imageMissing{background:linear-gradient(125deg,#f9e7d9,#f3f5f6)!important}
-#trainingDropdown .sigMenuNested{margin:13px 0 8px!important;background:#fff8f4!important;border:1px solid #f5ded4!important;box-shadow:none!important}
-#trainingDropdown .sigMenuNested b{font-size:12px!important}
-#trainingDropdown .sigMenuNested small{font-size:10px!important}
-.mobileInhousePanel .sigMobileNested{display:flex!important;width:100%!important;align-items:center!important;justify-content:space-between!important;gap:12px!important;margin:12px 0 4px!important;padding:12px 13px!important;background:#fff7f2!important;border:1px solid #f4ded4!important;border-radius:11px!important;text-align:left!important}
-.mobileInhousePanel .sigMobileNested b{font-size:12px!important}
-.mobileInhousePanel .sigMobileNested small{font-size:10px!important}
-@media(max-width:680px){#signatureProgrammes .signatureCard{min-height:385px!important}#signatureProgrammes .sigVisual{height:150px!important;margin:0 -20px 17px!important}}
-@media(prefers-reduced-motion:reduce){#signatureProgrammes .sigVisual img{transition:none!important}}
-</style>
-
-<style id="signature-polish-final">
-/* Exactly one arrow per navigation item, including hover/focus */
-#trainingDropdown .sigMenuNested i, .mobileInhousePanel .sigMobileNested i{display:none!important}
-#trainingDropdown .sigMenuNested::before, .mobileInhousePanel .sigMobileNested::before{display:none!important;content:none!important}
-#trainingDropdown .sigMenuNested::after,.mobileInhousePanel .sigMobileNested::after{content:"↗"!important;display:block!important;position:static!important;transform:none!important;animation:none!important;flex:0 0 auto;color:#e85a33;font-size:19px;line-height:1;transition:transform .24s ease!important;background:none!important;box-shadow:none!important;width:auto!important;height:auto!important;border:0!important}
-#trainingDropdown .sigMenuNested:hover::after,.mobileInhousePanel .sigMobileNested:hover::after{transform:translate(2px,-2px)!important}
-#trainingDropdown .sigMenuNested small,.mobileInhousePanel .sigMobileNested small{font-family:inherit!important;font-weight:400!important;color:#77828a!important;letter-spacing:0!important;line-height:1.55!important;font-size:11px!important}
-/* Edge-to-edge image, no white padding above or beside it */
-#signatureProgrammes .signatureCard,#signatureProgrammes .signatureCard:nth-child(4),#signatureProgrammes .signatureCard:nth-child(5){padding:0!important;overflow:hidden!important;display:flex!important;flex-direction:column!important;min-height:0!important;border-radius:19px!important;transition:transform .35s cubic-bezier(.2,.75,.25,1),box-shadow .35s ease,border-color .35s ease!important}
-#signatureProgrammes .sigVisual{display:block!important;flex:none!important;width:100%!important;height:auto!important;aspect-ratio:16/9!important;margin:0!important;overflow:hidden!important;position:relative!important;background:#eceae6!important;border-radius:0!important}
-#signatureProgrammes .sigVisual img{width:100%!important;height:100%!important;position:absolute!important;inset:0!important;display:block!important;object-fit:cover!important;object-position:center!important;transition:transform .75s cubic-bezier(.2,.75,.25,1),filter .6s ease!important}
-#signatureProgrammes .signatureCard:hover .sigVisual img,#signatureProgrammes .signatureCard:focus-within .sigVisual img{transform:scale(1.085)!important;filter:saturate(1.08)!important}
-#signatureProgrammes .signatureCard:hover{transform:translateY(-7px)!important;box-shadow:0 24px 46px rgba(18,36,48,.13)!important;border-color:rgba(239,91,42,.38)!important}
-#signatureProgrammes .signatureTop{padding:22px 25px 0!important;margin:0!important}
-#signatureProgrammes .signatureCard h3{padding:0 25px!important;margin:20px 0 10px!important}
-#signatureProgrammes .signatureCard p{padding:0 25px!important;margin:0 0 22px!important;flex:1!important}
-#signatureProgrammes .signatureAction{width:calc(100% - 50px)!important;margin:0 25px 24px!important;padding:16px 0 0!important;min-height:42px!important}
-#signatureProgrammes .signatureAction span{display:inline-block!important;transition:transform .25s ease!important}
-#signatureProgrammes .signatureAction:hover span{transform:translate(4px,-4px)!important}
-#signatureProgrammes .sigVisual::after{content:"";position:absolute;z-index:1;inset:0;pointer-events:none;background:linear-gradient(180deg,transparent 72%,rgba(17,30,39,.13));opacity:.4;transition:opacity .4s ease}
-#signatureProgrammes .signatureCard:hover .sigVisual::after{opacity:1}
-@media(max-width:680px){
- #signatureProgrammes .signatureCard,#signatureProgrammes .signatureCard:nth-child(4),#signatureProgrammes .signatureCard:nth-child(5){padding:0!important;flex:0 0 84%!important}
- #signatureProgrammes .sigVisual{height:auto!important;aspect-ratio:16/9!important;margin:0!important}
- #signatureProgrammes .signatureTop{padding:19px 20px 0!important}
- #signatureProgrammes .signatureCard h3{padding:0 20px!important;margin:17px 0 9px!important}
- #signatureProgrammes .signatureCard p{padding:0 20px!important;margin-bottom:18px!important}
- #signatureProgrammes .signatureAction{width:calc(100% - 40px)!important;margin:0 20px 20px!important}
-}
-@media(prefers-reduced-motion:reduce){#signatureProgrammes .signatureCard,#signatureProgrammes .sigVisual img,#signatureProgrammes .signatureAction span{transition:none!important}}
-</style>
-
-<style>
-/* Seamless hero artwork: retain existing text and CTA positions. */
-#page-home > .pageHero{
-  background-color:#f8f7f4!important;
-  background-image:linear-gradient(90deg,#f8f7f4 0%,rgba(248,247,244,.99) 20%,rgba(248,247,244,.83) 38%,rgba(248,247,244,.30) 56%,rgba(248,247,244,0) 75%),url("assets/hero-banner.png")!important;
-  background-size:100% 100%,auto 100%!important;
-  background-position:center,right center!important;
-}
-#page-home .peopleHeroSection{background:#f8f7f4!important}
-@media(min-width:901px){
- #page-home .peopleHeroArt{
-  background-image:linear-gradient(270deg,#f8f7f4 0%,rgba(248,247,244,.97) 13%,rgba(248,247,244,.55) 29%,rgba(248,247,244,0) 48%),url('assets/second-banner.png')!important;
- }
-}
-/* On mobile, both banners sit behind their text, softened for readability. */
-@media(max-width:900px){
- #page-home > .pageHero{
-  position:relative!important;isolation:isolate!important;
-  background:#f8f7f4!important;overflow:hidden!important;
-  padding-bottom:48px!important;
- }
- #page-home > .pageHero::before{
-  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
-  background:url('assets/hero-banner.png') right center / auto 100% no-repeat;
-  opacity:.24;
- }
- #page-home > .pageHero::after{display:none!important}
- #page-home > .pageHero > .heroGrid{position:relative!important;z-index:1!important}
- #page-home > .pageHero .heroGrid::after{display:none!important;content:none!important}
- #page-home .peopleHeroSection{position:relative!important;isolation:isolate!important;overflow:hidden!important}
- #page-home .peopleHeroSection .peopleHeroInner{
-  position:relative!important;z-index:2!important;
-  padding-bottom:70px!important;
- }
- #page-home .peopleHeroArt{
-  inset:0!important;height:auto!important;width:100%!important;
-  background-image:url('assets/second-banner.png')!important;
-  background-position:left center!important;background-size:auto 100%!important;
-  opacity:.23!important;animation:none!important;
- }
- #page-home .peopleHeroCopy{position:relative!important;z-index:2!important}
-}
-@media(max-width:600px){
- #page-home > .pageHero{padding-bottom:42px!important}
- #page-home > .pageHero::before{background-size:auto 100%;background-position:64% center;opacity:.20}
- #page-home .peopleHeroSection .peopleHeroInner{padding-top:68px!important;padding-bottom:68px!important}
- #page-home .peopleHeroArt{background-position:36% center!important;opacity:.20!important}
-}
-@media(prefers-reduced-motion:reduce){#page-home .peopleHeroArt{animation:none!important}}
-</style>
-</head>
+</style></head>
 <body>
 <div class="preloader" id="preloader" aria-hidden="true"><div class="preInner"><div class="preRing"></div><img class="preLogo" id="preLogo" alt=""><div class="preLine"></div></div></div>
 <header class="topbar">
@@ -4286,17 +4071,7 @@ button,a,input,select{touch-action:manipulation}button:focus-visible,a:focus-vis
       <div class="tile" data-consult="irer"><span>05</span><h3>IR / ER</h3><span>→</span></div>
     </div>
   </div></section>
-  <section class="section peopleHeroSection" aria-label="People Development">
-  <div class="peopleHeroArt" role="img" aria-label="A diverse professional team learning together at a workshop"></div>
-  <div class="wrap peopleHeroInner">
-    <div class="peopleHeroCopy reveal">
-      <div class="eyebrow">People Development</div>
-      <h2>Build capability, not just attendance.</h2>
-      <p>From practical HR knowledge for managers to leadership development and customised in-house programmes, the focus is on learning people can apply immediately at work.</p>
-      <button class="btn" data-page="training">Discover Training →</button>
-    </div>
-  </div>
-</section>
+  <section class="section"><div class="wrap two"><div class="media reveal"><img src="assets/second-banner.png" alt="Diverse group learning together in a workshop"></div><div class="reveal"><div class="eyebrow">People Development</div><h2>Build capability, not just attendance.</h2><p>From practical HR knowledge for managers to leadership development and customised in-house programmes, the focus is on learning people can apply immediately at work.</p><button class="btn" data-page="training">Discover Training →</button></div></div></section>
 <section class="section testimonialSection" id="testimonials" aria-label="Programme perspectives">
   <div class="wrap">
     <div class="sectionLeadRow">
@@ -4372,7 +4147,7 @@ button,a,input,select{touch-action:manipulation}button:focus-visible,a:focus-vis
     </div>
   </section>
 
-<section class="section clientFeatureSection" id="signatureProgrammes"><div class="wrap"><div class="eyebrow">Signature In-House Programmes</div><h2>Signature learning experiences.</h2><p class="clientSectionLead">Explore five signature learning experiences, each designed around a different people-development focus.</p><div class="signatureGrid" id="signatureCarousel"><article class="signatureCard sig-communication"><div class="sigVisual"><img src="assets/signature/connect-360.png" alt="Signature in-house programme banner" loading="lazy" onerror="this.parentElement.classList.add('imageMissing')"></div><div class="signatureTop"><span class="signaturePill">Communication & collaboration</span></div><h3>CONNECT 360</h3><p>Strengthen connections across teams through practical communication and shared understanding.</p><button type="button" class="signatureAction" data-programme="CONNECT 360">Explore Programme <span aria-hidden="true">↗</span></button></article><article class="signatureCard sig-empathy"><div class="sigVisual"><img src="assets/signature/eq-edge.png" alt="Signature in-house programme banner" loading="lazy" onerror="this.parentElement.classList.add('imageMissing')"></div><div class="signatureTop"><span class="signaturePill">Emotional intelligence</span></div><h3>EQ EDGE</h3><p>Build awareness, empathy and confidence in workplace interactions.</p><button type="button" class="signatureAction" data-programme="EQ EDGE">Explore Programme <span aria-hidden="true">↗</span></button></article><article class="signatureCard sig-team"><div class="sigVisual"><img src="assets/signature/people-power.png" alt="Signature in-house programme banner" loading="lazy" onerror="this.parentElement.classList.add('imageMissing')"></div><div class="signatureTop"><span class="signaturePill">People & team development</span></div><h3>PEOPLE POWER</h3><p>Develop stronger people practices, team trust and everyday leadership habits.</p><button type="button" class="signatureAction" data-programme="PEOPLE POWER">Explore Programme <span aria-hidden="true">↗</span></button></article><article class="signatureCard sig-coaching"><div class="sigVisual"><img src="assets/signature/certified-coaching.png" alt="Signature in-house programme banner" loading="lazy" onerror="this.parentElement.classList.add('imageMissing')"></div><div class="signatureTop"><span class="signaturePill">Coaching capability</span></div><h3>CERTIFIED COACHING</h3><p>Explore a structured coaching approach to support meaningful professional growth.</p><button type="button" class="signatureAction" data-programme="CERTIFIED COACHING">Explore Programme <span aria-hidden="true">↗</span></button></article><article class="signatureCard sig-mindset"><div class="sigVisual"><img src="assets/signature/nlp-mind-shift.png" alt="Signature in-house programme banner" loading="lazy" onerror="this.parentElement.classList.add('imageMissing')"></div><div class="signatureTop"><span class="signaturePill">Mindset & communication</span></div><h3>NLP MIND SHIFT</h3><p>Explore new perspectives, communication patterns and personal effectiveness.</p><button type="button" class="signatureAction" data-programme="NLP MIND SHIFT">Explore Programme <span aria-hidden="true">↗</span></button></article></div><div class="sigDots" id="signatureDots" aria-label="Signature programme slides"></div></div></section>
+<section class="section clientFeatureSection" id="signatureProgrammes"><div class="wrap"><div class="eyebrow">Signature In-House Programmes</div><h2>Signature learning experiences.</h2><p class="clientSectionLead">Explore five signature learning experiences, each designed around a different people-development focus.</p><div class="signatureGrid"><article class="signatureCard"><div class="signatureTop"><span class="signaturePill">Communication & collaboration</span></div><h3>CONNECT 360</h3><p>Strengthen connections across teams through practical communication and shared understanding.</p><button type="button" class="signatureAction" data-programme="CONNECT 360">Explore &amp; Enquire <span aria-hidden="true">↗</span></button></article><article class="signatureCard"><div class="signatureTop"><span class="signaturePill">Emotional intelligence</span></div><h3>EQ EDGE</h3><p>Build awareness, empathy and confidence in workplace interactions.</p><button type="button" class="signatureAction" data-programme="EQ EDGE">Explore &amp; Enquire <span aria-hidden="true">↗</span></button></article><article class="signatureCard"><div class="signatureTop"><span class="signaturePill">People & team development</span></div><h3>PEOPLE POWER</h3><p>Develop stronger people practices, team trust and everyday leadership habits.</p><button type="button" class="signatureAction" data-programme="PEOPLE POWER">Explore &amp; Enquire <span aria-hidden="true">↗</span></button></article><article class="signatureCard"><div class="signatureTop"><span class="signaturePill">Coaching capability</span></div><h3>CERTIFIED COACHING</h3><p>Explore a structured coaching approach to support meaningful professional growth.</p><button type="button" class="signatureAction" data-programme="CERTIFIED COACHING">Explore &amp; Enquire <span aria-hidden="true">↗</span></button></article><article class="signatureCard"><div class="signatureTop"><span class="signaturePill">Mindset & communication</span></div><h3>NLP MIND SHIFT</h3><p>Explore new perspectives, communication patterns and personal effectiveness.</p><button type="button" class="signatureAction" data-programme="NLP MIND SHIFT">Explore &amp; Enquire <span aria-hidden="true">↗</span></button></article></div></div></section>
   <section class="section soft" id="inHouseCategories">
     <div class="wrap">
       <div class="sectionLeadRow">
@@ -4450,8 +4225,6 @@ button,a,input,select{touch-action:manipulation}button:focus-visible,a:focus-vis
       <div class="formGrid">
         <div class="field"><label for="name">Name</label><input id="name" required placeholder="Your name"></div>
         <div class="field"><label for="company">Company</label><input id="company" placeholder="Company name"></div>
-        <div class="field"><label for="jobTitle">Position / Job Title</label><input id="jobTitle" placeholder="e.g. HR Manager" autocomplete="organization-title"></div>
-        <div class="field"><label for="emailAddress">Email Address</label><input id="emailAddress" type="email" placeholder="name@company.com" autocomplete="email"></div>
         <div class="field"><label for="phone">Contact Number</label><input id="phone" placeholder="e.g. +60..."></div>
         <div class="field"><label for="enquiryType">Enquiry Type</label><select id="enquiryType"><option>Training</option><option>HR Consulting</option><option>Payroll Management</option><option>Talent Solutions</option><option>IR / ER</option></select></div>
         <div class="field full"><label for="interest">Course / Service</label><input id="interest" placeholder="Select a course/service or type here"></div>
@@ -4578,8 +4351,6 @@ function renderMenus(){
         ${trainingKeys.map(k=>`<button data-training="${k}">${trainingData[k].label}</button>`).join('')}
       </div>
 
-      <button class="sigMenuLink sigMenuNested" type="button" data-signature-link><span><b>Signature In-House Programmes</b><small>Explore our five signature learning experiences</small></span><i>→</i></button>
-
       <button class="desktopPreviousPublic" data-page="public-training">
         <span>
           <b>Public Training</b>
@@ -4606,7 +4377,6 @@ function renderMenus(){
             <i>→</i>
           </button>
           ${trainingKeys.map(k=>`<button data-training="${k}">${trainingData[k].label}</button>`).join('')}
-          <button class="sigMobileLink sigMobileNested" type="button" data-signature-link><span><b>Signature In-House Programmes</b><small>Explore five learning experiences</small></span><i>→</i></button>
         </div>
       </section>
 
@@ -4694,7 +4464,34 @@ function renderPublicTraining(){
   publicEmpty.textContent=publicScheduleView==='past'?'No past events match your filters.':'No upcoming courses match your filters. Try another month or location.';
   publicPagination.innerHTML=pages>1?`<button type="button" data-public-page="prev" ${publicPage===1?'disabled':''} aria-label="Previous page">← Previous</button><span>${publicPage} / ${pages}</span><button type="button" data-public-page="next" ${publicPage===pages?'disabled':''} aria-label="Next page">Next →</button>`:'';
 }
-function courseImage(x){return 'assets/public-training/'+x.title.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'')+'.png';}
+const courseImageAliases={
+ 'financial-wellness-for-building-financial-confidence':'financial-wellness-building-financial-confidence',
+ 'building-coaching-culture-for-high-performing-teams':'building-coaching-culture-high-performing-teams',
+ 'power-of-storytelling-for-sales-marketing':'power-of-storytelling-sales-marketing',
+ 'nutrition-healthy-habits-for-workplace-wellbeing':'nutrition-healthy-habits-workplace-wellbeing',
+ 'microsoft-360-copilot':'microsoft-365-copilot',
+ 'generative-ai-artificial-intelligence-for-office-productivity':'generative-ai-for-office-productivity',
+ 'canva-ai-for-business-create-professional-designs-faster-smarter':'canva-ai-for-business',
+ 'ergonomics-for-preventing-pain-and-improving-productivity':'ergonomics-for-preventing-pain-improving-productivity',
+ 'hr-for-non-hr-managers':'hr-for-non-hr-manager',
+ 'mastering-payroll-employment-tax-employment-act-ea-compliance':'mastering-payroll-employment-tax-employment-act-ea-compliance',
+ 'mastering-payroll-employment-tax-employment-act-ea-compliance-compliance':'mastering-payroll-employment-tax-employment-act-ea-compliance',
+ 'finance-for-non-finance-professionals-managers':'finance-for-non-finance-professionals-managers',
+ 'emotional-intelligence-for-future-leaders':'emotional-intelligence-for-future-leaders',
+ 'training-needs-analysis-tna':'training-needs-analysis-tna',
+ 'data-visualization-and-storytelling':'data-visualization-and-storytelling',
+ 'production-planning-scheduling-excellence':'production-planning-scheduling-excellence',
+ 'strategic-project-management':'strategic-project-management',
+ 'lead-360-holistic-leadership-excellence':'lead-360-holistic-leadership-excellence',
+ 'excel-advanced-for-payroll':'excel-advanced-for-payroll',
+ 'total-rewards-management':'total-rewards-management',
+ 'microsoft-excel-basic-to-intermediate':'microsoft-excel-basic-to-intermediate',
+ 'mastering-payroll-employment-tax-employment-act-ea-compliance':'mastering-payroll-employment-tax-employment-act-ea-compliance'
+};
+function courseImage(x){
+ const slug=x.title.normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+ return 'assets/public-training/'+(courseImageAliases[slug]||slug)+'.png';
+}
 resetPublicFilters();renderPublicTraining();
 document.querySelectorAll("[data-schedule-view]").forEach(b=>b.addEventListener("click",()=>{publicScheduleView=b.dataset.scheduleView;publicPage=1;renderPublicTraining()}));
 [publicCategory,publicMonth,publicSearch].forEach(el=>el.addEventListener(el===publicSearch?'input':'change',()=>{publicPage=1;renderPublicTraining()}));
@@ -4876,13 +4673,13 @@ document.addEventListener('click',e=>{
   setTimeout(()=>document.getElementById('name')?.focus({preventScroll:true}),500);
 });
 
-enquiryForm.addEventListener('submit',e=>{e.preventDefault();const txt=`Hi ADtriomphe, I would like to make an enquiry.\n\nName: ${document.getElementById('name').value.trim()}\nCompany: ${company.value||'-'}\nPosition / Job Title: ${document.getElementById('jobTitle').value.trim()||'-'}\nEmail Address: ${document.getElementById('emailAddress').value.trim()||'-'}\nContact: ${phone.value||'-'}\nEnquiry Type: ${enquiryType.value}\nCourse / Service: ${interest.value||'-'}\nMessage: ${message.value||'-'}`;window.open('https://wa.me/60149607981?text='+encodeURIComponent(txt),'_blank')});
+enquiryForm.addEventListener('submit',e=>{e.preventDefault();const txt=`Hi ADtriomphe, I would like to make an enquiry.\n\nName: ${document.getElementById('name').value.trim()}\nCompany: ${company.value||'-'}\nContact: ${phone.value||'-'}\nEnquiry Type: ${enquiryType.value}\nCourse / Service: ${interest.value||'-'}\nMessage: ${message.value||'-'}`;window.open('https://wa.me/60149607981?text='+encodeURIComponent(txt),'_blank')});
 
 document.getElementById('sendEmailEnquiry')?.addEventListener('click',()=>{
   if(!enquiryForm.reportValidity())return;
   const fullName=document.getElementById('name').value.trim();
   const subject=`ADtriomphe Enquiry - ${enquiryType.value}`;
-  const body=`Hi ADtriomphe, I would like to make an enquiry.\n\nName: ${fullName}\nCompany: ${company.value.trim()||'-'}\nPosition / Job Title: ${document.getElementById('jobTitle').value.trim()||'-'}\nEmail Address: ${document.getElementById('emailAddress').value.trim()||'-'}\nContact: ${phone.value.trim()||'-'}\nEnquiry Type: ${enquiryType.value}\nCourse / Service: ${interest.value.trim()||'-'}\nMessage: ${message.value.trim()||'-'}`;
+  const body=`Hi ADtriomphe, I would like to make an enquiry.\n\nName: ${fullName}\nCompany: ${company.value.trim()||'-'}\nContact: ${phone.value.trim()||'-'}\nEnquiry Type: ${enquiryType.value}\nCourse / Service: ${interest.value.trim()||'-'}\nMessage: ${message.value.trim()||'-'}`;
   const recipient='training@adtriomphe.com';
   const gmail='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent(recipient)+'&su='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
   const opened=window.open(gmail,'_blank','noopener,noreferrer');
@@ -5184,20 +4981,27 @@ let io;function initReveal(){if(io)io.disconnect();io=new IntersectionObserver(e
  sync();
 })();
 </script><script>
-// Direct access to signature programmes from desktop and mobile Training menus.
-document.addEventListener('click',function(e){
- const link=e.target.closest('[data-signature-link]');if(!link)return;
- e.preventDefault();switchPage('inhouse');
- requestAnimationFrame(()=>requestAnimationFrame(()=>document.getElementById('signatureProgrammes')?.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})));
-});
+/* Desktop Training dropdown: click to toggle, not hover. Mobile untouched. */
 (function(){
- const rail=document.getElementById('signatureCarousel'),dots=document.getElementById('signatureDots');if(!rail||!dots)return;
- const cards=[...rail.querySelectorAll('.signatureCard')];
- cards.forEach((card,i)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Show '+card.querySelector('h3').textContent);b.onclick=()=>card.scrollIntoView({behavior:'smooth',block:'nearest',inline:'start'});dots.appendChild(b)});
- let ticking=false;
- function update(){ticking=false;let nearest=0,dist=Infinity;cards.forEach((card,i)=>{let d=Math.abs(card.offsetLeft-rail.offsetLeft-rail.scrollLeft);if(d<dist){dist=d;nearest=i}});[...dots.children].forEach((b,i)=>{b.classList.toggle('active',i===nearest);b.setAttribute('aria-current',i===nearest?'true':'false')})}
- rail.addEventListener('scroll',()=>{if(!ticking){ticking=true;requestAnimationFrame(update)}},{passive:true});window.addEventListener('resize',update);update();
+ const trigger=document.querySelector('.navItem > button[data-page="training"]');
+ const menu=document.getElementById('trainingDropdown');
+ if(!trigger||!menu)return;
+ const item=trigger.parentElement;
+ trigger.setAttribute('aria-haspopup','true');
+ trigger.setAttribute('aria-expanded','false');
+ function close(){item.classList.remove('trainingClickOpen');trigger.setAttribute('aria-expanded','false');}
+ trigger.addEventListener('click',function(e){
+   if(window.matchMedia('(min-width:981px)').matches){
+     e.preventDefault();e.stopImmediatePropagation();
+     const wasOpen=item.classList.contains('trainingClickOpen');
+     document.querySelectorAll('.navItem.trainingClickOpen').forEach(el=>el.classList.remove('trainingClickOpen'));
+     item.classList.toggle('trainingClickOpen',!wasOpen);
+     trigger.setAttribute('aria-expanded',String(!wasOpen));
+   }
+ },true);
+ document.addEventListener('click',function(e){if(!item.contains(e.target))close();});
+ menu.addEventListener('click',function(e){if(e.target.closest('button'))close();});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')close();});
 })();
-</script>
-</body>
+</script></body>
 </html>
