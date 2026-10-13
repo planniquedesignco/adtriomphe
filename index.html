@@ -3840,6 +3840,47 @@ header.scrolled{
   #trainingDropdown .desktopPreviousInhouse i{font-weight:500;font-size:19px}
   #trainingDropdown .desktopPreviousInhouse:hover i{transform:none}
 }
+
+/* Restored full-bleed home imagery, responsive readable overlays */
+#page-home>.pageHero{position:relative!important;isolation:isolate;overflow:hidden!important;background:#f8f7f4!important;min-height:680px;display:flex;align-items:center;padding:95px 0!important}
+#page-home>.pageHero:after{display:none!important}
+#page-home>.pageHero .heroGrid{display:block!important;position:relative!important;width:100%;z-index:1}
+#page-home>.pageHero .heroGrid>.reveal:first-child{position:relative;z-index:3;width:min(53%,660px)}
+#page-home>.pageHero .heroGrid h1{max-width:650px}
+#page-home>.pageHero .homeHeroLead{max-width:570px}
+#page-home>.pageHero .heroImg{position:absolute!important;z-index:0;pointer-events:none;top:50%;right:-7%;transform:translateY(-50%);width:80%!important;height:800px!important;border:0!important;border-radius:0!important;box-shadow:none!important;overflow:visible!important;background:transparent!important;-webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.45) 20%,#000 43%);mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.45) 20%,#000 43%)}
+#page-home>.pageHero .heroImg img{width:100%!important;height:100%!important;object-fit:contain!important;object-position:right center!important;transform:none!important}
+#page-home>.pageHero .heroImg:after{display:none!important}
+#page-home .peopleHeroSection{position:relative;isolation:isolate;overflow:hidden;background:#f8f7f4;min-height:630px;padding:0;display:flex;align-items:center}
+#page-home .peopleHeroSection .peopleHeroInner{position:relative;z-index:2;min-height:630px;display:flex;align-items:center;padding-top:85px;padding-bottom:85px}
+#page-home .peopleHeroCopy{position:relative;z-index:2;width:min(49%,550px)}
+#page-home .peopleHeroCopy h2{font-size:clamp(36px,3.1vw,53px);line-height:1.13;letter-spacing:-.04em;margin-top:18px}
+#page-home .peopleHeroCopy p{font-size:16px;line-height:1.8;margin:22px 0 26px;color:var(--muted)}
+#page-home .peopleHeroArt{position:absolute;z-index:0;inset:0 0 0 40%;background:linear-gradient(90deg,#f8f7f4 0%,rgba(248,247,244,.65) 16%,transparent 40%),url('assets/second-banner.png') right center/cover no-repeat}
+@media(max-width:900px){
+#page-home>.pageHero{min-height:650px;padding:72px 0!important}
+#page-home>.pageHero .heroGrid>.reveal:first-child{width:72%}
+#page-home>.pageHero .heroImg{right:-25%;width:100%!important;height:680px!important;opacity:.7}
+#page-home .peopleHeroCopy{width:62%}
+#page-home .peopleHeroArt{inset:0 0 0 25%;opacity:.8}
+}
+@media(max-width:600px){
+#page-home>.pageHero{min-height:680px!important;padding:64px 0!important;align-items:center}
+#page-home>.pageHero .heroGrid{display:flex!important;align-items:center!important;min-height:540px}
+#page-home>.pageHero .heroGrid>.reveal:first-child{width:100%!important;max-width:100%!important;padding:24px 16px;position:relative;z-index:4;background:rgba(248,247,244,.77);border-radius:14px;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+#page-home>.pageHero .heroImg{position:absolute!important;inset:0 -24px 0 -24px!important;transform:none!important;width:calc(100% + 48px)!important;height:100%!important;opacity:1!important;-webkit-mask-image:none!important;mask-image:none!important}
+#page-home>.pageHero .heroImg img{object-fit:cover!important;object-position:57% center!important}
+#page-home>.pageHero .heroImg:before{content:'';position:absolute;inset:0;z-index:1;background:rgba(248,247,244,.25)}
+#page-home>.pageHero h1{font-size:clamp(36px,10vw,51px)!important;line-height:1.1!important}
+#page-home>.pageHero .homeHeroLead{font-size:15px!important;line-height:1.65!important}
+#page-home .peopleHeroSection{min-height:590px;display:flex;align-items:center}
+#page-home .peopleHeroSection .peopleHeroInner{min-height:590px;padding-top:55px;padding-bottom:55px;display:flex;align-items:center}
+#page-home .peopleHeroArt{inset:0!important;opacity:1;background:linear-gradient(180deg,rgba(248,247,244,.35),rgba(248,247,244,.22)),url('assets/second-banner.png') center center/cover no-repeat}
+#page-home .peopleHeroCopy{width:100%;padding:25px 19px;background:rgba(248,247,244,.8);border-radius:14px;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+#page-home .peopleHeroCopy h2{font-size:clamp(32px,9vw,43px)}
+#page-home .peopleHeroCopy p{font-size:15px;line-height:1.7}
+}
+
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
 body,button,input,select,textarea,h1,h2,h3,.stat b,.testimonialQuote,.courseDetailBlock h3{font-family:'Poppins',Arial,sans-serif!important}
@@ -4051,7 +4092,54 @@ button,a,input,select{touch-action:manipulation}button:focus-visible,a:focus-vis
  .navItem:has(> #trainingDropdown) > #trainingDropdown{top:calc(100% - 2px)!important}
  .navItem:has(> #trainingDropdown):hover > button{color:var(--orange)!important}
 }
-</style></head>
+</style><style id="home-text-position-fix">
+/* Keep the full-width artwork, but bring both copy blocks inward. */
+@media (min-width:901px){
+ #page-home>.pageHero .heroGrid>.reveal:first-child{margin-left:clamp(35px,5vw,100px)!important;width:min(51%,650px)!important}
+ #page-home .peopleHeroInner{padding-left:clamp(50px,7vw,140px)!important}
+ #page-home .peopleHeroCopy{width:min(52%,570px)!important}
+}
+@media (min-width:601px) and (max-width:900px){
+ #page-home>.pageHero .heroGrid>.reveal:first-child{margin-left:24px!important;width:65%!important}
+ #page-home .peopleHeroInner{padding-left:28px!important}
+}
+@media (max-width:600px){
+ #page-home>.pageHero .heroGrid{justify-content:center!important}
+ #page-home>.pageHero .heroGrid>.reveal:first-child{margin:0 auto!important;width:calc(100% - 24px)!important;padding:25px 20px!important}
+ #page-home .peopleHeroInner{justify-content:center!important}
+ #page-home .peopleHeroCopy{margin:0 auto!important;width:calc(100% - 20px)!important}
+}
+</style>
+<style id="home-copy-centered-desktop-final">
+/* Desktop: center the text visually in its half of each full-width hero. */
+@media (min-width: 901px) {
+ #page-home > .pageHero .heroGrid > .reveal:first-child {
+   margin-left: clamp(110px, 15vw, 300px) !important;
+   width: min(43vw, 670px) !important;
+   max-width: 670px !important;
+ }
+ #page-home .peopleHeroSection .peopleHeroInner {
+   padding-left: 0 !important;
+   padding-right: clamp(90px, 11vw, 230px) !important;
+   justify-content: flex-end !important;
+ }
+ #page-home .peopleHeroSection .peopleHeroCopy {
+   width: min(40vw, 620px) !important;
+   margin-left: auto !important;
+   margin-right: 0 !important;
+ }
+}
+@media (min-width: 601px) and (max-width: 900px) {
+ #page-home > .pageHero .heroGrid > .reveal:first-child {
+   margin-left: 8vw !important;
+   width: 64% !important;
+ }
+ #page-home .peopleHeroSection .peopleHeroInner {
+   padding-left: 8vw !important;
+ }
+}
+</style>
+</head>
 <body>
 <div class="preloader" id="preloader" aria-hidden="true"><div class="preInner"><div class="preRing"></div><img class="preLogo" id="preLogo" alt=""><div class="preLine"></div></div></div>
 <header class="topbar">
@@ -4107,7 +4195,7 @@ button,a,input,select{touch-action:manipulation}button:focus-visible,a:focus-vis
       <div class="tile" data-consult="irer"><span>05</span><h3>IR / ER</h3><span>→</span></div>
     </div>
   </div></section>
-  <section class="section"><div class="wrap two"><div class="media reveal"><img src="assets/second-banner.png" alt="Diverse group learning together in a workshop"></div><div class="reveal"><div class="eyebrow">People Development</div><h2>Build capability, not just attendance.</h2><p>From practical HR knowledge for managers to leadership development and customised in-house programmes, the focus is on learning people can apply immediately at work.</p><button class="btn" data-page="training">Discover Training →</button></div></div></section>
+  <section class="section peopleHeroSection" aria-label="People Development"><div class="peopleHeroArt" role="img" aria-label="Professionals learning together in a workshop"></div><div class="wrap peopleHeroInner"><div class="peopleHeroCopy reveal"><div class="eyebrow">People Development</div><h2>Build capability, not just attendance.</h2><p>From practical HR knowledge for managers to leadership development and customised in-house programmes, the focus is on learning people can apply immediately at work.</p><button class="btn" data-page="training">Discover Training →</button></div></div></section>
 <section class="section testimonialSection" id="testimonials" aria-label="Programme perspectives">
   <div class="wrap">
     <div class="sectionLeadRow">
