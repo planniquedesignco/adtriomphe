@@ -3843,6 +3843,38 @@ header.scrolled{
  #signatureProgrammes .sigDots button.active{width:24px;border-radius:10px;background:#ee5c34}
 }
 @media(prefers-reduced-motion:reduce){#signatureProgrammes .signatureCard,#signatureProgrammes .sigVisual svg,#signatureProgrammes .sigVisualOrb{transition:none!important}#signatureProgrammes .signatureGrid{scroll-behavior:auto!important}}
+
+/* People Development: full-bleed hero layout matching the homepage */
+#page-home .peopleHeroSection{position:relative;isolation:isolate;overflow:hidden;background:#f8f7f4;min-height:620px;padding:0;display:flex;align-items:center}
+#page-home .peopleHeroSection .peopleHeroInner{position:relative;z-index:2;min-height:620px;display:flex;align-items:center;padding-top:78px;padding-bottom:78px}
+#page-home .peopleHeroCopy{width:min(49%,550px);position:relative;z-index:2}
+#page-home .peopleHeroCopy h2{font-size:clamp(36px,3.1vw,53px);line-height:1.13;letter-spacing:-.045em;max-width:540px;margin-top:19px}
+#page-home .peopleHeroCopy p{font-size:16px;line-height:1.8;max-width:530px;margin:22px 0 26px;color:var(--muted)}
+#page-home .peopleHeroArt{position:absolute;z-index:0;inset:0 0 0 42%;background-image:linear-gradient(90deg,#f8f7f4 0%,rgba(248,247,244,.80) 9%,rgba(248,247,244,0) 33%),url('assets/second-banner.png');background-repeat:no-repeat;background-position:center,right center;background-size:100% 100%,cover;animation:peopleArtEnter 1.2s ease-out both}
+@keyframes peopleArtEnter{from{opacity:.3;transform:translateX(22px)}to{opacity:1;transform:translateX(0)}}
+@media(max-width:900px){
+ #page-home .peopleHeroSection{min-height:0;display:block}
+ #page-home .peopleHeroSection .peopleHeroInner{min-height:0;padding-top:70px;padding-bottom:390px;display:block}
+ #page-home .peopleHeroCopy{width:100%;max-width:630px}
+ #page-home .peopleHeroArt{inset:auto 0 0 0;height:410px;background-image:linear-gradient(180deg,#f8f7f4 0%,rgba(248,247,244,0) 25%),url('assets/second-banner.png');background-size:100% 100%,cover;background-position:center,center center}
+}
+@media(max-width:600px){
+ #page-home .peopleHeroSection .peopleHeroInner{padding-top:55px;padding-bottom:295px}
+ #page-home .peopleHeroCopy h2{font-size:clamp(32px,9vw,42px)}
+ #page-home .peopleHeroCopy p{font-size:15px;line-height:1.7}
+ #page-home .peopleHeroArt{height:305px;background-position:center,center center}
+}
+
+/* People Development: restore original image-left, text-right arrangement */
+@media(min-width:901px){
+ #page-home .peopleHeroSection .peopleHeroInner{justify-content:flex-end}
+ #page-home .peopleHeroCopy{width:min(46%,550px);margin-left:auto}
+ #page-home .peopleHeroArt{inset:0 46% 0 0;background-image:linear-gradient(270deg,#f8f7f4 0%,rgba(248,247,244,.78) 10%,rgba(248,247,244,0) 34%),url('assets/second-banner.png');background-position:center,left center;background-size:100% 100%,cover;animation:peopleArtEnterLeft 1.2s ease-out both}
+}
+@keyframes peopleArtEnterLeft{from{opacity:.3;transform:translateX(-22px)}to{opacity:1;transform:translateX(0)}}
+@media(prefers-reduced-motion:reduce){#page-home .peopleHeroArt{animation:none}}
+
+
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet"><style>
 body,button,input,select,textarea,h1,h2,h3,.stat b,.testimonialQuote,.courseDetailBlock h3{font-family:'Poppins',Arial,sans-serif!important}
@@ -4147,6 +4179,57 @@ button,a,input,select{touch-action:manipulation}button:focus-visible,a:focus-vis
 }
 @media(prefers-reduced-motion:reduce){#signatureProgrammes .signatureCard,#signatureProgrammes .sigVisual img,#signatureProgrammes .signatureAction span{transition:none!important}}
 </style>
+
+<style>
+/* Seamless hero artwork: retain existing text and CTA positions. */
+#page-home > .pageHero{
+  background-color:#f8f7f4!important;
+  background-image:linear-gradient(90deg,#f8f7f4 0%,rgba(248,247,244,.99) 20%,rgba(248,247,244,.83) 38%,rgba(248,247,244,.30) 56%,rgba(248,247,244,0) 75%),url("assets/hero-banner.png")!important;
+  background-size:100% 100%,auto 100%!important;
+  background-position:center,right center!important;
+}
+#page-home .peopleHeroSection{background:#f8f7f4!important}
+@media(min-width:901px){
+ #page-home .peopleHeroArt{
+  background-image:linear-gradient(270deg,#f8f7f4 0%,rgba(248,247,244,.97) 13%,rgba(248,247,244,.55) 29%,rgba(248,247,244,0) 48%),url('assets/second-banner.png')!important;
+ }
+}
+/* On mobile, both banners sit behind their text, softened for readability. */
+@media(max-width:900px){
+ #page-home > .pageHero{
+  position:relative!important;isolation:isolate!important;
+  background:#f8f7f4!important;overflow:hidden!important;
+  padding-bottom:48px!important;
+ }
+ #page-home > .pageHero::before{
+  content:"";position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:url('assets/hero-banner.png') right center / auto 100% no-repeat;
+  opacity:.24;
+ }
+ #page-home > .pageHero::after{display:none!important}
+ #page-home > .pageHero > .heroGrid{position:relative!important;z-index:1!important}
+ #page-home > .pageHero .heroGrid::after{display:none!important;content:none!important}
+ #page-home .peopleHeroSection{position:relative!important;isolation:isolate!important;overflow:hidden!important}
+ #page-home .peopleHeroSection .peopleHeroInner{
+  position:relative!important;z-index:2!important;
+  padding-bottom:70px!important;
+ }
+ #page-home .peopleHeroArt{
+  inset:0!important;height:auto!important;width:100%!important;
+  background-image:url('assets/second-banner.png')!important;
+  background-position:left center!important;background-size:auto 100%!important;
+  opacity:.23!important;animation:none!important;
+ }
+ #page-home .peopleHeroCopy{position:relative!important;z-index:2!important}
+}
+@media(max-width:600px){
+ #page-home > .pageHero{padding-bottom:42px!important}
+ #page-home > .pageHero::before{background-size:auto 100%;background-position:64% center;opacity:.20}
+ #page-home .peopleHeroSection .peopleHeroInner{padding-top:68px!important;padding-bottom:68px!important}
+ #page-home .peopleHeroArt{background-position:36% center!important;opacity:.20!important}
+}
+@media(prefers-reduced-motion:reduce){#page-home .peopleHeroArt{animation:none!important}}
+</style>
 </head>
 <body>
 <div class="preloader" id="preloader" aria-hidden="true"><div class="preInner"><div class="preRing"></div><img class="preLogo" id="preLogo" alt=""><div class="preLine"></div></div></div>
@@ -4203,7 +4286,17 @@ button,a,input,select{touch-action:manipulation}button:focus-visible,a:focus-vis
       <div class="tile" data-consult="irer"><span>05</span><h3>IR / ER</h3><span>→</span></div>
     </div>
   </div></section>
-  <section class="section"><div class="wrap two"><div class="media reveal"><img src="assets/second-banner.png" alt="Diverse group learning together in a workshop"></div><div class="reveal"><div class="eyebrow">People Development</div><h2>Build capability, not just attendance.</h2><p>From practical HR knowledge for managers to leadership development and customised in-house programmes, the focus is on learning people can apply immediately at work.</p><button class="btn" data-page="training">Discover Training →</button></div></div></section>
+  <section class="section peopleHeroSection" aria-label="People Development">
+  <div class="peopleHeroArt" role="img" aria-label="A diverse professional team learning together at a workshop"></div>
+  <div class="wrap peopleHeroInner">
+    <div class="peopleHeroCopy reveal">
+      <div class="eyebrow">People Development</div>
+      <h2>Build capability, not just attendance.</h2>
+      <p>From practical HR knowledge for managers to leadership development and customised in-house programmes, the focus is on learning people can apply immediately at work.</p>
+      <button class="btn" data-page="training">Discover Training →</button>
+    </div>
+  </div>
+</section>
 <section class="section testimonialSection" id="testimonials" aria-label="Programme perspectives">
   <div class="wrap">
     <div class="sectionLeadRow">
